@@ -402,17 +402,15 @@ conn.sendMessage(id, `PONG!!\n_Speed : ${latensi.toFixed(4)} Second_`, MessageTy
 if (text.includes('.Nulis')){
 conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil\n_contoh : .nulis udin love udan_',MessageType.text, { quoted: m } );
 }
-if (text.includes('.nulis')){
-  const teks = text.replace(/.nulis /, '')
-    axios.get(`https://mhankbarbars.herokuapp.com/nulis?text=${teks}&apiKey=${apibarbar}`)
-    .then((res) => {
-      imageToBase64(res.data.result)
-        .then(
-          (ress) => {
-            conn.sendMessage(id, '[ WAIT ] Menulis ⏳ silahkan tunggu', MessageType.text, {quoted: m})
-            var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf ,MessageType.image, {caption: 'Nulis gini aja males lu', quoted: m})
-        })
+	case 'nulis':
+				case 'tulis':
+					if (args.length < 1) return reply('Yang mau di tulis apaan?')
+					teks = body.slice(7)
+					reply(mess.wait)
+					anu = await fetchJson(`https://mhankbarbar.tech/nulis?text=${teks}&apiKey=B4w56Fy3WQnfEyUNvQy8`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					buff = await getBuffer(anu.result)
+					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})        })
     })
 }
   //Pengucapan ulang
