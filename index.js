@@ -79,7 +79,7 @@ conn.on('user-presence-update', json => console.log(json.id + ' presence is => '
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : ''
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by ig:@mrf.zvx`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by ig:@fadhilhidayattt_`)
 })
 
 conn.on('message-new', async(m) =>
@@ -336,7 +336,7 @@ if (text.includes('.map')){
 
 //Donasi
 if (text.includes('.donasi')){
-conn.sendMessage(id, `Mau donai agar bot bisa terus berjalan.
+conn.sendMessage(id, `Mau donasi agar bot bisa terus berjalan.
 
  اتَّقوا النَّارَ ولو بشقِّ تمرةٍ ، فمن لم يجِدْ فبكلمةٍ طيِّبةٍ
 _“jauhilah api neraka, walau hanya dengan bersedekah sebiji kurma (sedikit). Jika kamu tidak punya, maka bisa dengan kalimah thayyibah” [HR. Bukhari 6539, Muslim 1016]_
