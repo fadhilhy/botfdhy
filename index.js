@@ -1861,6 +1861,8 @@ WA OWNER : 0821 3158 1861
 ├ _Ex : .Chatprank Hai bang/sat_ 
 ├≽️ *.Alay (teks)*
 ├ _Ex : .Alay hai udin_ 
+├≽️ *.bot (sim simi chat)*
+├ _Ex : .bot sim simi lagi ngapain ?_ 
 ╰────────────⊱
 
 ╭════•›「 PRIMBON 」 
