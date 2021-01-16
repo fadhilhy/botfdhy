@@ -402,13 +402,6 @@ conn.sendMessage(id, `PONG!!\n_Speed : ${latensi.toFixed(4)} Second_`, MessageTy
 if (text.includes('.Nulis')){
 conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil\n_contoh : .nulis udin love udan_',MessageType.text, { quoted: m } );
 }
-					if (.nulis) return reply('Yang mau di tulis apaan?')
-					teks = body.slice(7)
-					reply(mess.wait)
-					anu = await fetchJson(`https://mhankbarbar.tech/nulis?text=${teks}&apiKey=B4w56Fy3WQnfEyUNvQy8`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					buff = await getBuffer(anu.result)
-					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})        })
     })
 }
   //Pengucapan ulang
@@ -1788,7 +1781,7 @@ _Gunakan titik (.) & huruf kecil untuk menjalankan command_
  ➸ WA OWNER : 0821 3158 1861
 
  ➸ Jumlah Fitur : 120
- ➸ Fitur Error : Cerpen & Puisi
+ ➸ Fitur Error : Cerpen & Puisi & nulis
  ➸ Fitur Fixed : Tebakgambar & Family100
  ➸ Prefix:  *「 . 」*
  ➸ Status: *「 Online 24 JAM 」*
