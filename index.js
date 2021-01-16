@@ -198,7 +198,7 @@ axios.get(`https://api.vhtear.com/zodiak?query=${teks}&apikey=${apivhtear}`).the
 })
 }
 
-  //Tebakgambar
+    //Tebakgambar
 if (text.includes('.Tebakgambar')){
 conn.sendMessage(id, 'Silakan ulangi command dengan huruf kecil',MessageType.text, {quoted: m});
 }
